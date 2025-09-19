@@ -247,7 +247,7 @@ const PFPs = () => {
                 href="https://x.com/Chewy_xyz" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-8 h-8 hover:scale-110 transition-transform duration-300 relative group"
+                className="w-10 h-10 hover:scale-110 transition-transform duration-300 relative group"
               >
                 <div className="absolute inset-0 bg-[#FFD447] rounded-full blur-sm opacity-0 group-hover:opacity-30 transition-opacity"></div>
                 <img 
@@ -268,7 +268,7 @@ const PFPs = () => {
                 href="https://discord.gg/chewymonad" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-8 h-8 hover:scale-110 transition-transform duration-300 relative group"
+                className="w-10 h-10 hover:scale-110 transition-transform duration-300 relative group"
               >
                 <div className="absolute inset-0 bg-[#FFD447] rounded-full blur-sm opacity-0 group-hover:opacity-30 transition-opacity"></div>
                 <img 

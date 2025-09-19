@@ -231,15 +231,14 @@ const PFPs = () => {
                   }}
                 />
               </div>
-              <div className="font-[Orbitron] font-bold tracking-wider text-left">
-  <span className="block text-2xl sm:inline sm:text-2xl md:text-4xl bg-gradient-to-r from-[#FFD447] to-[#FFA500] bg-clip-text text-transparent">
-    CHEWY
-  </span>
-  <span className="block text-xs sm:inline sm:text-2xl md:text-4xl sm:ml-2 text-gray-300 sm:bg-gradient-to-r sm:from-[#FFD447] sm:to-[#FFA500] sm:bg-clip-text sm:text-transparent">
-    PFP GENERATOR
-  </span>
-</div>
-
+              <div className="ml-1 font-[Orbitron] font-bold tracking-wider text-left">
+                <span className="block text-2xl sm:inline sm:text-2xl md:text-4xl bg-gradient-to-r from-[#FFD447] to-[#FFA500] bg-clip-text text-transparent">
+                  CHEWY
+                </span>
+                <span className="block text-xs sm:inline sm:text-2xl md:text-4xl sm:ml-2 text-gray-300 sm:bg-gradient-to-r sm:from-[#FFD447] sm:to-[#FFA500] sm:bg-clip-text sm:text-transparent">
+                  PFP GENERATOR
+                </span>
+              </div>
 
             </div>
             <div className="flex items-center gap-1 md:gap-3">

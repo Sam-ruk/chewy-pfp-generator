@@ -202,7 +202,7 @@ const PFPs = () => {
   const customizationOrder = ["Background", "Backpack", "Model", "Crown", "Clothes", "Mouth", "Eyes"];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#0f0f0f] to-[#1a1a2e] relative overflow-x-hidden">      <div className="absolute inset-0 opacity-10">
+    <div className="overflow-x-hidden min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#0f0f0f] to-[#1a1a2e] relative overflow-x-hidden">      <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#FFD447] rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#FFA500] rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#FFD447] rounded-full blur-3xl"></div>
@@ -224,23 +224,30 @@ const PFPs = () => {
                 <img 
                   src="/logo.png" 
                   alt="Chewy Logo" 
-                  className="relative w-15 h-15 lg:w-10 lg:h-10 object-contain filter drop-shadow-[0_0_8px_rgba(255,212,71,0.5)]"
+                  className="relative w-10 h-10 object-contain filter drop-shadow-[0_0_8px_rgba(255,212,71,0.5)]"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.style.display = 'none';
                   }}
                 />
               </div>
-              <span className="text-sm sm:text-lg md:text-2xl font-bold bg-gradient-to-r from-[#FFD447] to-[#FFA500] bg-clip-text text-transparent font-[Orbitron] tracking-wider">
-                CHEWY PFP GENERATOR
-              </span>
+              <div className="font-[Orbitron] font-bold tracking-wider text-left">
+  <span className="block text-2xl sm:inline sm:text-2xl md:text-4xl bg-gradient-to-r from-[#FFD447] to-[#FFA500] bg-clip-text text-transparent">
+    CHEWY
+  </span>
+  <span className="block text-xs sm:inline sm:text-2xl md:text-4xl sm:ml-2 text-gray-300 sm:bg-gradient-to-r sm:from-[#FFD447] sm:to-[#FFA500] sm:bg-clip-text sm:text-transparent">
+    PFP GENERATOR
+  </span>
+</div>
+
+
             </div>
-            <div className="flex items-center gap-2 md:gap-3">
+            <div className="flex items-center gap-1 md:gap-3">
               <a 
                 href="https://x.com/Chewy_xyz" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-300 relative group"
+                className="w-8 h-8 hover:scale-110 transition-transform duration-300 relative group"
               >
                 <div className="absolute inset-0 bg-[#FFD447] rounded-full blur-sm opacity-0 group-hover:opacity-30 transition-opacity"></div>
                 <img 
@@ -261,7 +268,7 @@ const PFPs = () => {
                 href="https://discord.gg/chewymonad" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-6 h-6 md:w-8 md:h-8 hover:scale-110 transition-transform duration-300 relative group"
+                className="w-8 h-8 hover:scale-110 transition-transform duration-300 relative group"
               >
                 <div className="absolute inset-0 bg-[#FFD447] rounded-full blur-sm opacity-0 group-hover:opacity-30 transition-opacity"></div>
                 <img 

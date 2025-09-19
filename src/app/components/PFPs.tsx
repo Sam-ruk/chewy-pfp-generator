@@ -366,38 +366,36 @@ const PFPs = () => {
 
               {/* Trait Options */}
               {currentCategory && (
-                <div className="bg-[#000]/60 backdrop-blur-md rounded-2xl p-3 md:p-4 border border-[#FFD447]/20 flex-1 flex flex-col min-h-0 max-h-[240px] sm:max-h-[300px] lg:max-h-none lg:h-auto overflow-y-auto custom-scrollbar">
-                  <div className="overflow-y-auto flex-1 custom-scrollbar">
-                    <div className="p-1 md:p-3 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-4">
-                      {traits[currentCategory].map((option) => (
-                        <div key={option} className="relative group">
-                          <button
-                            onClick={() => handleTraitChange(currentCategory, option)}
-                            className={`relative w-full aspect-square rounded-xl border-2 transition-all duration-300 overflow-hidden backdrop-blur-sm hover:scale-102 ${
-                              selectedTraits[currentCategory] === option
-                                ? "border-[#FFD447] bg-[#FFD447]/10 shadow-[0_0_10px_rgba(255,212,71,0.3)]"
-                                : "border-[#FFD447]/20 bg-[#000]/50 hover:border-[#FFD447]/50"
-                            }`}
-                            title={`${currentCategory} ${option}`}
-                          >
-                            <img
-                              src={getImagePath(currentCategory, option, true)}
-                              alt={`${currentCategory} ${option}`}
-                              className="w-full h-full object-contain transition-transform duration-200 group-hover:scale-110"
-                              onError={(e) => {
-                                const img = e.target as HTMLImageElement;
-                                img.src = getImagePath(currentCategory, option, false);
-                              }}
-                            />
-                            {selectedTraits[currentCategory] === option && (
-                              <div className="absolute inset-0 bg-[#FFD447]/5 opacity-100 pointer-events-none"></div>
-                            )}
-                          </button>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <div className="bg-[#000]/60 sm:backdrop-blur-md rounded-2xl p-3 md:p-4 border border-[#FFD447]/20 flex-1 flex flex-col min-h-0 max-h-[240px] sm:max-h-[300px] lg:max-h-none lg:h-auto overflow-y-auto custom-scrollbar">
+                  <div className="p-1 md:p-3 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-4 gap-2 md:gap-4">
+                    {traits[currentCategory].map((option) => (
+                      <div key={option} className="relative group">
+                        <button
+                          onClick={() => handleTraitChange(currentCategory, option)}
+                          className={`relative w-full aspect-square rounded-xl border-2 transition-all duration-300 overflow-hidden backdrop-blur-sm hover:scale-102 ${
+                            selectedTraits[currentCategory] === option
+                              ? "border-[#FFD447] bg-[#FFD447]/10 shadow-[0_0_10px_rgba(255,212,71,0.3)]"
+                              : "border-[#FFD447]/20 bg-[#000]/50 hover:border-[#FFD447]/50"
+                          }`}
+                          title={`${currentCategory} ${option}`}
+                        >
+                          <img
+                            src={getImagePath(currentCategory, option, true)}
+                            alt={`${currentCategory} ${option}`}
+                            className="w-full h-full object-contain transition-transform duration-200 group-hover:scale-110"
+                            onError={(e) => {
+                              const img = e.target as HTMLImageElement;
+              img.src = getImagePath(currentCategory, option, false);
+            }}
+          />
+          {selectedTraits[currentCategory] === option && (
+            <div className="absolute inset-0 bg-[#FFD447]/5 opacity-100 pointer-events-none"></div>
+          )}
+        </button>
+      </div>
+    ))}
+  </div>
+</div>
               )}
             </div>
           </div>
